@@ -12,17 +12,13 @@
             background-color: #020617; 
             color: #ffffff;
         }
-        
-        /* 頁籤內容切換動畫 */
         .tab-content { display: none; animation: fadeIn 0.3s ease-in-out; }
         .tab-content.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* 共用背景色 */
         .card-bg { background-color: #113f59; }
         .tab-inactive-bg { background-color: #0a2536; }
 
-        /* 全新優化的頁籤按鈕樣式 (修復切換 Bug) */
         .tab-btn {
             flex: 1;
             padding: 1.25rem 0;
@@ -60,15 +56,12 @@
 
     <div class="w-full max-w-4xl">
         
-        <!-- 頂部 Banner -->
         <img src="banner-header.png" 
              alt="活動主視覺 Banner" 
              class="w-full h-auto object-cover rounded-t-2xl shadow-lg border-b-4 border-blue-500">
 
-        <!-- 共用頭部資訊 -->
         <div class="card-bg px-6 py-12 md:px-12 relative border-x border-cyan-700/50">
             
-            <!-- 報名資格 -->
             <div class="mb-10 flex items-start">
                 <div class="w-4 h-4 bg-white rounded-full mt-2.5 mr-5 shrink-0 shadow-[0_0_8px_white]"></div>
                 <div>
@@ -76,14 +69,12 @@
                 </div>
             </div>
 
-            <!-- 核心目的 (左右對稱文字框) -->
             <div class="mb-12 flex items-start">
                 <div class="w-4 h-4 bg-white rounded-full mt-2.5 mr-5 shrink-0 shadow-[0_0_8px_white]"></div>
                 <div class="w-full">
                     <h3 class="text-3xl font-bold tracking-wide mb-6">核心目的</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                        <!-- 框框 1 -->
                         <div class="bg-[#05162b] border border-[#2563eb] rounded-xl p-6 flex flex-col shadow-lg">
                             <h4 class="text-2xl font-bold text-center text-white mb-4 tracking-widest">提升工作效益</h4>
                             <div class="w-full h-px bg-[#2563eb] mb-5 opacity-70"></div>
@@ -91,7 +82,6 @@
                                 透過競賽探詢 AI 協作的工作模式，提升工作效益的具體工作流程與設計，以及 AI 工具實際在工作流程中的應用。
                             </p>
                         </div>
-                        <!-- 框框 2 -->
                         <div class="bg-[#05162b] border border-[#2563eb] rounded-xl p-6 flex flex-col shadow-lg">
                             <h4 class="text-2xl font-bold text-center text-white mb-4 tracking-widest">推動數位轉型</h4>
                             <div class="w-full h-px bg-[#2563eb] mb-5 opacity-70"></div>
@@ -103,7 +93,6 @@
                 </div>
             </div>
 
-            <!-- 初賽報名按鈕 -->
             <div class="flex justify-center mt-8">
                 <a href="https://forms.cloud.microsoft/r/ewnNQPvpmE" target="_blank" class="bg-[#0b2b3f] hover:bg-[#1e587a] border-2 border-white text-white text-2xl font-bold py-4 px-20 rounded-xl shadow-[0_0_15px_rgba(255,255,255,0.2)] transition duration-300">
                     初賽報名
@@ -111,7 +100,6 @@
             </div>
         </div>
 
-        <!-- 頁籤切換導覽列 (已優化按鈕結構) -->
         <div class="flex w-full px-2 card-bg border-x border-cyan-700/50 pt-6">
             <button id="btn-tab1" onclick="switchTab('tab1')" class="tab-btn active text-xl md:text-2xl">
                 競賽與主題說明
@@ -121,7 +109,6 @@
             </button>
         </div>
 
-        <!-- 頁籤 1：競賽與主題說明 -->
         <div id="tab1" class="tab-content active card-bg border-2 border-white border-t-0 p-8 md:p-14 pb-20">
             
             <div class="mb-14 flex items-start">
@@ -185,39 +172,38 @@
                 <div class="w-full">
                     <h3 class="text-3xl font-bold tracking-wide mb-8">競賽階段</h3>
                     <div class="flex flex-col md:flex-row items-center justify-between gap-4 pl-1">
-                        
                         <div class="w-full md:w-1/4 bg-[#082232] border border-cyan-600 rounded-lg p-4 flex flex-col items-center justify-between h-48">
                             <div class="text-center text-xl font-bold leading-tight mt-2 text-white">競賽提案<br><span class="text-cyan-400">&</span><br>初賽審查</div>
-                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">7/17<br>初賽結果公布</div>
+                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">
+                                7/17<br>初賽結果公布
+                            </div>
                         </div>
-                        
                         <div class="text-cyan-600 text-4xl font-black rotate-90 md:rotate-0">❯</div>
-                        
                         <div class="w-full md:w-1/4 bg-[#082232] border border-cyan-600 rounded-lg p-4 flex flex-col items-center justify-between h-48">
                             <div class="text-center text-xl font-bold leading-tight mt-2 text-white">實作開發<br><span class="text-cyan-400">&</span><br>決賽評選</div>
-                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">7/20~8/20<br>實作開發</div>
+                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">
+                                07/20~08/20<br>實作開發
+                            </div>
                         </div>
-                        
                         <div class="text-cyan-600 text-4xl font-black rotate-90 md:rotate-0">❯</div>
-                        
-                        <div class="w-full md:w-1/4 bg-[#082232] border border-cyan-600 rounded-lg p-4 flex flex-col items-center justify-between h-48">
-                            <div class="text-center text-xl font-bold leading-tight mt-2 text-white">決賽展示<br>Demo Day</div>
-                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">9/3<br>決賽展示</div>
+                        <div class="w-full md:w-1/4 bg-[#082232] border border-cyan-600 rounded-lg p-4 flex flex-col items-center justify-center h-48">
+                            <div class="text-center text-2xl font-bold leading-tight mb-5 text-white">決賽展示<br>Demo Day</div>
+                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">
+                                09/03<br>決賽展示
+                            </div>
                         </div>
-                        
                         <div class="text-cyan-600 text-4xl font-black rotate-90 md:rotate-0">❯</div>
-                        
-                        <div class="w-full md:w-1/4 bg-[#082232] border border-cyan-600 rounded-lg p-4 flex flex-col items-center justify-between h-48">
-                            <div class="text-center text-xl font-bold leading-tight mt-2 text-white">成果發表<br>競賽頒獎</div>
-                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">9/11<br>成果發表</div>
+                        <div class="w-full md:w-1/4 bg-[#082232] border border-cyan-600 rounded-lg p-4 flex flex-col items-center justify-center h-48">
+                            <div class="text-center text-2xl font-bold leading-tight mb-5 text-white">成果發表<br>競賽頒獎</div>
+                            <div class="bg-white text-[#0a1526] text-sm md:text-xs font-bold py-2 px-1 rounded text-center w-full mt-auto">
+                                09月份<br>成果發表
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 頁籤 2：競賽標準與時程 -->
         <div id="tab2" class="tab-content card-bg border-2 border-white border-t-0 p-8 md:p-14 pb-20">
             
             <div class="mb-16 flex items-start">
@@ -249,26 +235,21 @@
                 </div>
             </div>
 
-            <!-- 時程規畫 -->
             <div class="flex items-start">
                 <div class="w-4 h-4 bg-white rounded-full mt-2.5 mr-5 shrink-0 shadow-[0_0_8px_white]"></div>
                 <div class="w-full">
                     <h3 class="text-3xl font-bold tracking-wide mb-10">時程規畫</h3>
                     
                     <div class="bg-[#082232] rounded-xl p-8 md:p-10 border border-cyan-800">
-                        <!-- 加大左邊距以容納放大的文字 -->
                         <div class="relative border-l-2 border-cyan-600 ml-4 md:ml-[180px] space-y-14 py-4">
                             
-                            <!-- Step 1 -->
                             <div class="relative pl-8 md:pl-10">
                                 <div class="absolute w-5 h-5 bg-yellow-400 rounded-full -left-[11px] top-1 shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
                                 
-                                <!-- 桌面版放大白字標題 -->
                                 <div class="absolute -left-[190px] top-0 w-40 text-right hidden md:block">
                                     <div class="text-3xl font-black text-white tracking-widest">STEP 1</div>
                                     <div class="text-xl text-white font-bold mt-2">競賽提案 & 初審</div>
                                 </div>
-                                <!-- 手機版放大白字標題 -->
                                 <div class="md:hidden text-2xl font-black text-white tracking-widest mb-4">STEP 1 <span class="text-white text-xl ml-2">競賽提案 & 初審</span></div>
                                 
                                 <div class="bg-[#113f59] p-5 rounded-lg border border-cyan-700/50 space-y-3">
@@ -287,7 +268,6 @@
                                 </div>
                             </div>
 
-                            <!-- Step 2 -->
                             <div class="relative pl-8 md:pl-10">
                                 <div class="absolute w-5 h-5 bg-yellow-400 rounded-full -left-[11px] top-1 shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
                                 
@@ -317,7 +297,6 @@
                                 </div>
                             </div>
 
-                            <!-- Step 3 -->
                             <div class="relative pl-8 md:pl-10">
                                 <div class="absolute w-5 h-5 bg-yellow-400 rounded-full -left-[11px] top-1 shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
                                 
@@ -343,7 +322,6 @@
                                 </div>
                             </div>
 
-                            <!-- Step 4 -->
                             <div class="relative pl-8 md:pl-10">
                                 <div class="absolute w-5 h-5 bg-yellow-400 rounded-full -left-[11px] top-1 shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
                                 
@@ -372,14 +350,12 @@
 
         </div>
 
-        <!-- 底部 Footer -->
         <img src="banner-footer.png" 
              alt="底部 Footer Banner" 
              class="w-full h-auto object-cover rounded-b-2xl shadow-lg border-t-0">
 
     </div>
 
-    <!-- 全新修復的腳本 -->
     <script>
         function switchTab(tabId) {
             // 隱藏所有頁籤內容
